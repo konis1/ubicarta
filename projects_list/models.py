@@ -1,5 +1,11 @@
 from django.db import models
 
+class Categorie(models.Model):
+    name = models.CharField(max_length = 300)
+    description = models.TextField()
+    def __str__(self):
+        return self.name
+
 class Project(models.Model):
     title = models.CharField(max_length = 300)
     summary = models.CharField(max_length = 500)
@@ -9,6 +15,9 @@ class Project(models.Model):
     challenges = models.TextField()
     solutions = models.TextField()
     future_directions = models.TextField()
+    description_image = models.ImageField(upload_to="static/media")
+    project_category = models.ForeignKey(Categorie, on_delete=models.PROTECT, default = Categorie.objects.first().id)
+
     def __str__(self):
         return self.title
 
@@ -21,9 +30,3 @@ class ProjectLink(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     url = models.URLField()
     description = models.TextField()
-
-class Categorie(models.Model):
-    name = models.CharField(max_length = 300)
-    description = models.TextField()
-    def __str__(self):
-        return self.name

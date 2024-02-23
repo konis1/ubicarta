@@ -1,15 +1,24 @@
 body{
   margin: 0;
   font-family: ubuntu;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1,5;
+  color:#6b7c92
 }
 
-h1 {
+h1,h3 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: calc(1.35rem + 1.2vw);
   font-weight: 400;
   line-height: 1.2;
   color: #333359;
+}
+
+a {
+  color:#3174ff;
+  text-decoration: none;
 }
 
 .text-center {

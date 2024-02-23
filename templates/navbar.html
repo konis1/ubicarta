@@ -1,15 +1,23 @@
-<div class="border-bottom">
-  <nav class="navbar">
+<div>
+  <div class="navbar border-bottom">
     <div>
       <a href=""><img src="" alt="">LOGO</a>
     </div>
     <div>
-        <button>
-          Ham menu
+        <button class="ham-menu" onclick="toggleMenu()" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
         </button>
     </div>
-    <ul class="navbar--list-menu">
-      <li><a href="Nos projets"></a></li>
-    </ul>
-  </nav>
-</div>
+  </div>
+  <div class="menu-wrap">
+    <nav class="nav-menu border-bottom" id="navMenu">
+      <ul class="menu">
+        <li>
+          <a href="Nos projets">Nos projets</a>
+        </li>
+        <li>
+          <a href="Nos projets">Contactez-nous</a>
+        </li>
+      </ul>
+    </nav>
+  </div>

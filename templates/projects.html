@@ -2,17 +2,27 @@
 
 {% block content%}
 
-<div class="text-center">
-  <h1>Nos projets</h1>
-</div>
-
 <div>
   <div>
-    {% for project in projects %}
-        <div>
-            <h5>{{ project.title }}</h5>
-        </div>
-      {% endfor %}
+    {% for categorie in categories %}
+      <div class="text-center wrapper">
+        <h2> {{ categorie.name }}</h2>
+        {% for project in projects %}
+          {% if project.project_category.id == categorie.id %}
+              <div>
+                <h3>{{ project.title }}</h3>
+              </div>
+              <section class="description">
+                {{ project.summary }}
+              </section>
+              <div><a href="">Découvrez le projet {{ project.title }} > </a></div>
+              <div >
+                <img class="description-image" src="{{ project.description_image.url }}" alt="{{ project.title }}">
+              </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
     </div>
   </div>
 </div>
