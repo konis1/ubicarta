@@ -9,6 +9,8 @@
         <h2> {{ categorie.name }}</h2>
         {% for project in projects %}
           {% if project.project_category.id == categorie.id %}
+          <div class="container">
+            <div class="projects-left {% if project.id|divisibleby:'2' %} inversed {% endif %}">
               <div>
                 <h3>{{ project.title }}</h3>
               </div>
@@ -16,9 +18,13 @@
                 {{ project.summary }}
               </section>
               <div><a href="">Découvrez le projet {{ project.title }} > </a></div>
+            </div>
+            <div class="projects-right">
               <div >
                 <img class="description-image" src="{{ project.description_image.url }}" alt="{{ project.title }}">
               </div>
+            </div>
+          </div>
           {% endif %}
         {% endfor %}
       </div>

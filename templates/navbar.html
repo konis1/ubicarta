@@ -1,23 +1,43 @@
+{% load static %}
 <div>
-  <div class="navbar border-bottom">
-    <div>
-      <a href=""><img src="" alt="">LOGO</a>
+  <div class="border-bottom">
+    <div class="navbar-small">
+      <div class="logo-container">
+        <a href="/"><img class="logo" src="{% static 'assets/logo.png' %}" alt=" Logo Ubicarta"></a>
+      </div>
+      <div>
+          <button class="ham-menu" onclick="toggleMenu()" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+      </div>
     </div>
-    <div>
-        <button class="ham-menu" onclick="toggleMenu()" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
-        </button>
+    <div class="navbar-large">
+      <div class="logo-container">
+        <a href="/"><img class="logo" src="{% static 'assets/logo.png' %}" alt=" Logo Ubicarta"></a>
+      </div>
+      <div>
+        <nav class="nav-large" >
+          <ul class="menu-large">
+            <li>
+              <a href="Nos projets">Nos projets</a>
+            </li>
+            <li>
+              <a href="Nos projets">Contactez-nous</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
-  <div class="menu-wrap">
-    <nav class="nav-menu border-bottom" id="navMenu">
-      <ul class="menu">
-        <li>
-          <a href="Nos projets">Nos projets</a>
-        </li>
-        <li>
-          <a href="Nos projets">Contactez-nous</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="menu-wrap">
+      <nav class="nav-menu border-bottom" id="navMenu">
+        <ul class="menu">
+          <li>
+            <a href="Nos projets">Nos projets</a>
+          </li>
+          <li>
+            <a href="Nos projets">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>

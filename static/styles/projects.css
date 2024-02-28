@@ -14,3 +14,31 @@
   width:80%;
   margin:0 auto;
 }
+
+@media (min-width: 1200px) {
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3em;
+    align-items: center;
+  }
+
+  .projects-left {
+    text-align: left;
+  }
+
+  .description {
+    line-height: 2em;
+    margin:0 0 1em 0;
+  }
+
+  .inversed {
+    order: 1;
+  }
+
+  .wrapper h2 {
+    margin-top: 2em;
+  }
+
+
+}
