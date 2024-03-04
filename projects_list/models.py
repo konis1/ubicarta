@@ -23,7 +23,7 @@ class Project(models.Model):
 
 class Image(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to="media")
+    image = models.ImageField(upload_to="static/media")
     description = models.TextField()
 
 class ProjectLink(models.Model):
@@ -34,6 +34,7 @@ class ProjectLink(models.Model):
 class Feature(models.Model):
     feature_name = models.CharField(max_length = 300)
     feature_description = models.TextField()
+    feature_image = models.ImageField(upload_to="static/media/feature", null=True)
     feature_project = models.ForeignKey(Project, on_delete=models.CASCADE)
     def __str__(self):
         return self.feature_name
