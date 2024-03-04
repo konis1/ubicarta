@@ -1,0 +1,28 @@
+{% extends 'header.html' %}
+
+{% block content%}
+
+<div>
+  <div>
+    <div>
+      <img src="" alt=""> main image
+    </div>
+    <div>
+      carrousel
+    </div>
+  </div>
+  <div>
+    {% for feature in features %}
+      {% if feature.feature_project.id == project.id %}
+        <div class="feature">
+          <h2>{{feature.feature_name}}</h2>
+        </div>
+        <div class="feature-description">
+          <p> {{feature.feature_description}}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content%}

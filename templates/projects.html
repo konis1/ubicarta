@@ -17,7 +17,7 @@
               <section class="description">
                 {{ project.summary }}
               </section>
-              <div><a href="">Découvrez le projet {{ project.title }} > </a></div>
+              <div><a href="{% url 'project' project.id %}">Découvrez le projet {{ project.title }} > </a></div>
             </div>
             <div class="projects-right">
               <div >

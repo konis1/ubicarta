@@ -30,3 +30,10 @@ class ProjectLink(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     url = models.URLField()
     description = models.TextField()
+
+class Feature(models.Model):
+    feature_name = models.CharField(max_length = 300)
+    feature_description = models.TextField()
+    feature_project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.feature_name
