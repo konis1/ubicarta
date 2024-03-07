@@ -5,12 +5,10 @@
 <div>
   <div>
     {% for image in images %}
-    <div class="carrousel">
+    <div class="image-top">
       <img src="{{image.image.url}}" alt="">
     </div>
     {% endfor %}
-    <div>
-    </div>
   </div>
   <div>
     {% for feature in features %}
