@@ -13,11 +13,11 @@
 .wrapper {
   width:80%;
   margin:0 auto;
-  
+
 }
 
 @media (min-width: 1200px) {
-  .container{
+  .two-columns{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 3em;
@@ -40,6 +40,5 @@
   .wrapper h2 {
     margin-top: 2em;
   }
-
 
 }

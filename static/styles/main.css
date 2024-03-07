@@ -36,7 +36,7 @@ a {
   text-decoration: none;
 }
 
-.text-center {
+.text-content {
   text-align: center;
 }
 
@@ -44,4 +44,14 @@ a {
   background-color: rgba(255, 255, 255, 0.61);
   padding: 20px;
   border-radius: 8px;
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    background-repeat: repeat;
+  }
+
+  .container{
+    margin-top: 3em;
+  }
 }

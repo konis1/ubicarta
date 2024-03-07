@@ -5,6 +5,8 @@
 
 .title {
   margin-bottom: 2vh;
+  margin-top: 2vh;
+  text-align: center;
 }
 
 .image-container {
@@ -26,4 +28,12 @@
 .image-top img{
   width:100%;
   height:auto;
+}
+
+@media (min-width: 1200px) {
+  .text-content {
+    line-height:1.8em;
+    text-align:left;
+  }
+
 }

@@ -10,28 +10,28 @@
     </div>
     {% endfor %}
   </div>
-  <div>
+  <div >
     {% for feature in features %}
-        <div class="wrapper feature text-center">
-          <div class="title">
-            <h3>{{feature.feature_name}}</h3>
-          </div>
-          {% if feature.feature_image != null%}
-          <div class="image-container">
-            <img class="responsive-image" src="{{feature.feature_image.url}}" alt="feature">
-          </div>
-          {% endif %}
-          <div class="feature-description">
-            <p> {{feature.feature_description}}</p>
-          </div>
-          <div class="d-flex justify-content-center">
-            {% if device_type == "apple" %}
-            <a href="https://apps.apple.com/fr/app/ignrando-carte-de-randonn%C3%A9e/id1454207995?l=fr&ls=1%3Fpt%3D118115707&ct=ignrando_fr_appli_haut&mt=8" type="button" class="btn btn-info"> Découvrir l'appli {{project.title}}</a>
-            {% else %}
-            <a href="https://play.google.com/store/apps/details?id=ubicarta.ignrando&referrer=utm_source%3Dignrando_fr_appli_haut" type="button" class="btn btn-info"> Découvrir l'appli {{project.title}}</a>
-            {% endif %}
-          </div>
+      <div class="wrapper feature text-content ">
+        <div class="title">
+          <h3>{{feature.feature_name}}</h3>
         </div>
+        {% if feature.feature_image != null%}
+        <div class="image-container">
+          <img class="responsive-image" src="{{feature.feature_image.url}}" alt="feature">
+        </div>
+        {% endif %}
+        <div class="feature-description">
+          <p> {{feature.feature_description}}</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          {% if device_type == "apple" %}
+          <a href="https://apps.apple.com/fr/app/ignrando-carte-de-randonn%C3%A9e/id1454207995?l=fr&ls=1%3Fpt%3D118115707&ct=ignrando_fr_appli_haut&mt=8" type="button" class="btn btn-info"> Découvrir l'appli {{project.title}}</a>
+          {% else %}
+          <a href="https://play.google.com/store/apps/details?id=ubicarta.ignrando&referrer=utm_source%3Dignrando_fr_appli_haut" type="button" class="btn btn-info"> Découvrir l'appli {{project.title}}</a>
+          {% endif %}
+        </div>
+      </div>
     {% endfor %}
   </div>
 </div>

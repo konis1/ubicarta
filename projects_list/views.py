@@ -29,3 +29,6 @@ def project(request, pk):
         'images': images
         }
     return render(request, 'project.html', context)
+
+def contact_us(request):
+    return render(request)
