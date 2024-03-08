@@ -1,6 +1,7 @@
 .feature {
   margin-top: 1vh;
   margin-bottom: 5vh;
+  width:75%;
 }
 
 .title {
@@ -32,8 +33,12 @@
 
 @media (min-width: 1200px) {
   .text-content {
-    line-height:1.8em;
     text-align:left;
+  }
+
+  .feature-description {
+    width: 75%;
+    margin: auto;
   }
 
 }
