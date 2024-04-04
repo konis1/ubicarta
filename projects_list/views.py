@@ -32,8 +32,12 @@ def project(request, pk):
 
 def home(request):
     # get project selected for home
-    # get the main image for each project ?
-    return render(request, 'home.html')
+    # Order by order
+    projects = Project.objects.filter(on_homepage = True)
+    context = {
+        'projects': projects,
+    }
+    return render(request, 'home.html', context)
 
 def contact_us(request):
     return render(request)
