@@ -3,13 +3,12 @@
 {% block content%}
 
 <div>
-  <div>
+  <div class="text-content wrapper">
     {% for categorie in categories %}
-      <div class="text-center wrapper">
-        <h2> {{ categorie.name }}</h2>
+    <h1 class="text-center"> {{ categorie.name }}</h1>
+      <div class="two-columns">
         {% for project in projects %}
           {% if project.project_category.id == categorie.id %}
-          <div class="container">
             <div class="projects-left {% if project.id|divisibleby:'2' %} inversed {% endif %}">
               <div>
                 <h3>{{ project.title }}</h3>
@@ -17,14 +16,15 @@
               <section class="description">
                 {{ project.summary }}
               </section>
-              <div><a href="">Découvrez le projet {{ project.title }} > </a></div>
+              <div>
+                <a href="{% url 'project' project.id %}">Découvrez le projet {{ project.title }}</a>
+              </div>
             </div>
-            <div class="projects-right">
+            <div class="projects-right text-center">
               <div >
                 <img class="description-image" src="{{ project.description_image.url }}" alt="{{ project.title }}">
               </div>
             </div>
-          </div>
           {% endif %}
         {% endfor %}
       </div>

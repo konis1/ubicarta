@@ -7,16 +7,15 @@
 
 .description {
   margin: 20px;
-  line-height: 1.3em;
 }
 
 .wrapper {
-  width:80%;
+  width:95%;
   margin:0 auto;
 }
 
 @media (min-width: 1200px) {
-  .container{
+  .two-columns{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 3em;
@@ -28,7 +27,6 @@
   }
 
   .description {
-    line-height: 2em;
     margin:0 0 1em 0;
   }
 
@@ -39,6 +37,5 @@
   .wrapper h2 {
     margin-top: 2em;
   }
-
 
 }

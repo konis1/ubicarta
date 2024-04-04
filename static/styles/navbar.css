@@ -61,10 +61,6 @@
   display: flex;
 }
 
-@media (max-width: 768px) {
-
-}
-
 @media (min-width: 1200px) {
   .navbar-large {
     display: flex;
