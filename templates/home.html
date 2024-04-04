@@ -1,0 +1,23 @@
+{% extends 'header.html' %}
+
+{% block content%}
+
+<div>
+    <h1 class="title">Cartographies numériques</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div>
+            <h3> Test 1 </h3>
+            <picture>
+              <img src="{{image.image.url}}" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+</div>
+
+{% endblock content%}

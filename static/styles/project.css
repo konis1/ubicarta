@@ -1,7 +1,12 @@
+.image-top img{
+  width:100%;
+  height:auto;
+}
+
 .feature {
   margin-top: 1vh;
   margin-bottom: 5vh;
-  width:75%;
+  width:95%;
 }
 
 .title {
@@ -26,10 +31,6 @@
   object-fit: cover;
 }
 
-.image-top img{
-  width:100%;
-  height:auto;
-}
 
 @media (min-width: 1200px) {
   .text-content {
@@ -39,6 +40,15 @@
   .feature-description {
     width: 75%;
     margin: auto;
+  }
+
+  .btn-interactive {
+    transition: transform 0.3s;
+  }
+
+  .btn-interactive:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
 }

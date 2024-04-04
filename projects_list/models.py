@@ -15,6 +15,7 @@ class Project(models.Model):
     challenges = models.TextField()
     solutions = models.TextField()
     future_directions = models.TextField()
+    on_homepage = models.BooleanField(default = False)
     description_image = models.ImageField(upload_to="static/media")
     project_category = models.ForeignKey(Categorie, on_delete=models.PROTECT, default = Categorie.objects.first().id)
 

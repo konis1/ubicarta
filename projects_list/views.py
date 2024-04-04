@@ -30,5 +30,10 @@ def project(request, pk):
         }
     return render(request, 'project.html', context)
 
+def home(request):
+    # get project selected for home
+    # get the main image for each project ?
+    return render(request, 'home.html')
+
 def contact_us(request):
     return render(request)
